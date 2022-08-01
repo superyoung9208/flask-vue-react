@@ -1,0 +1,6 @@
+{
+  "semi": false,
+  "singleQuote": true
+  //禁止随时添加逗号,这个很重要。
+  "trailingComma": "none"
+}
