@@ -43,7 +43,7 @@
               v-if="
                 user.is_following && $route.params.id != sharedState.user_id
               "
-              v-on:click="unFollowUser($route.params.id)"
+              v-on:click="onUnfollowUser($route.params.id)"
               class="
                 btn btn-block
                 u-btn-outline-red
