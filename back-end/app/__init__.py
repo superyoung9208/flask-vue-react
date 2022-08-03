@@ -1,20 +1,13 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from app.extensions import db, migrate
 from config import Config
-from app.models import User, Post
-
-# Flask-SQLAlchemy plugin
-db = SQLAlchemy()
-# # Flask-Migrate plugin
-migrate = Migrate()
 
 
 def create_app(config_class=Config):
+
     app = Flask(__name__)
     app.config.from_object(config_class)
-
     # Enable CORS
     CORS(app, resources=r'/*',origins="*",allow_headers="*",methods=["GET","POST","OPTIONS", "DELETE", "PUT"])
     # Init Flask-SQLAlchemy
@@ -27,6 +20,5 @@ def create_app(config_class=Config):
     app.register_blueprint(api_bp, url_prefix='/api')
 
     return app
-
 
 from app import models

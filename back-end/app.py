@@ -1,6 +1,6 @@
 from app import create_app
 from app.extensions import db
-from app.models import User, Post
+from app.models import User, Post, Comment
 from config import Config
 import os
 import sys
@@ -25,7 +25,9 @@ def make_shell_context():
     return {
         'db': db,
         'User': User,
-        'Post': Post}
+        'Post': Post,
+        'Comment': Comment
+        }
 
 @app.cli.command()
 @click.option('--coverage/--no-coverage', default=False, help='Run tests under code coverage.')
