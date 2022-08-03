@@ -91,7 +91,7 @@ class EditProfile extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="about_me">location</label>
+                  <label htmlFor="about_me">about_me</label>
                   <input 
                     type="text" 
                     className="form-control" 

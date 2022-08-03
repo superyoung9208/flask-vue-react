@@ -36,10 +36,10 @@ const Followers = ({ params, editpost, deletePost, user }) => {
   // }
   return (
     <div>
-      <div classNameNameName="card border-0 g-mb-15">
-        <div classNameNameName="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
-          <h3 classNameName="h6 mb-0">
-            <i classNameName="icon-people g-pos-rel g-top-1 g-mr-5"></i>
+      <div className="card border-0 g-mb-15">
+        <div className="card-header d-flex align-items-center justify-content-between g-bg-gray-light-v5 border-0 g-mb-15">
+          <h3 className="h6 mb-0">
+            <i className="icon-people g-pos-rel g-top-1 g-mr-5"></i>
             Followers of {user.name || user.username}
             {
               followers && <small
@@ -47,21 +47,7 @@ const Followers = ({ params, editpost, deletePost, user }) => {
               </small>
             }
           </h3>
-          <span className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
-              <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </span>
-        </div>
-        <div classNameNameName="card-body">
-          <h5 classNameNameName="card-title">Special title treatment</h5>
-          <p classNameNameName="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          {/* <a href="#" classNameNameName="btn btn-primary">Go somewhere</a> */}
+          <div></div>
         </div>
       </div>
     </div>
